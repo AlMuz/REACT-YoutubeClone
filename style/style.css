@@ -24,3 +24,7 @@
 .list-group-item:hover {
   background-color: #eee;
 }
+
+.navbar-brand {
+  padding-left: 25px;
+}

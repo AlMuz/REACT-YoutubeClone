@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import _ from 'lodash';
 import YTSearch from 'youtube-api-search';
 
 import SearchBar from './components/search_bar';
@@ -29,6 +30,7 @@ class App extends Component {
   }
 
   render() {
+    const videoSearch = _.debounce((term) => { this.videoSearch(term) }, 300)
     return (
       <div>
         <SearchBar onSearchTermChange={term => this.videoSearch(term)} />
